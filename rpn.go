@@ -80,6 +80,7 @@ func ToRPN(expression string) (rpnText string, wrongAt int, parseErr error) {
 	reader := strings.NewReader(expression)
 	wrongAt = 0
 	rpnText = ""
+	stack_ptr = -1
 
 	for {
 		r, runeSize, eol := reader.ReadRune()
